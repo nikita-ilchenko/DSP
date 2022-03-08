@@ -1,2 +1,2 @@
 # DSP
-## Library of DSP functions
+Library of DSP functions
