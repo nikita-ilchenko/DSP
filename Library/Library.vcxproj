@@ -141,10 +141,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MakeFreqShift.cpp" />
-    <ClCompile Include="Test_MakeFreqShift.cpp" />
+    <ClCompile Include="TestMakeFreqShift.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MakeFreqShift.h" />
+    <ClInclude Include="TestMakeFreqShift.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

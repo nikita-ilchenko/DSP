@@ -21,12 +21,15 @@
     <ClCompile Include="MakeFreqShift.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Test_MakeFreqShift.cpp">
+    <ClCompile Include="TestMakeFreqShift.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MakeFreqShift.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMakeFreqShift.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
