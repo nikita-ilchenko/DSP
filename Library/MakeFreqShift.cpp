@@ -22,6 +22,7 @@ bool MakeFreqShift(const std::vector<std::complex<float>>& data_in,
     //                      2.0 * M_PI * freq_shift * j)));  // 2.4e7 samples/sec
     data_out[j] *= cos(2.0 * M_PI * freq_shift * j) +
                    1i * sin(2.0 * M_PI * freq_shift * j);  // 3.9e7 samples/sec
+
   }
   return 0;
 }
