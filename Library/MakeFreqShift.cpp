@@ -10,7 +10,6 @@
 bool MakeFreqShift(const std::vector<ComplexSamples>& data_in,
                    const double freq_shift,
                    std::vector<ComplexSamples>& data_out) {
-  using namespace std::complex_literals;
   if (freq_shift >= 1 || freq_shift < 0) {
     std::cout << "Error: freq_shift should be from 0 to 1" << std::endl;
     return 1;

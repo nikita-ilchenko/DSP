@@ -1,6 +1,8 @@
 #include "TestMakeFreqShift.h"
+#include "TestMakeConvolution.h"
 
 int main() {
-  TestMakeFreqShift();
+  //TestMakeFreqShift();
+  TestMakeConvolution();
   return 0;
 }

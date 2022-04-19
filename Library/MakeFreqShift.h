@@ -7,7 +7,6 @@
 struct ComplexSamples {
   float realPart;
   float imagPart;
-  
 };
 
 bool MakeFreqShift(const std::vector<ComplexSamples>& data_in,

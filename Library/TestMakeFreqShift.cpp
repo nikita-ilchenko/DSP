@@ -13,13 +13,10 @@
 #include "MakeFreqShift.h"
 
 bool TestMakeFreqShift() {
-  //using namespace std::complex_literals;
-  const int64_t kNumberOfSamples = 15000000;
+  const int64_t kNumberOfSamples = 1000;
   bool fail;
   std::vector<ComplexSamples> signal_freq_first(kNumberOfSamples);
   std::vector<ComplexSamples> signal_freq_second(kNumberOfSamples);
-  //std::vector<float> signal_freq_first_real(kNumberOfSamples);
-  //std::vector<float> signal_freq_first_imag(kNumberOfSamples);
 
   // Generating signals with freq1 and freq2
   double freq_first = 0.4;
@@ -27,8 +24,6 @@ bool TestMakeFreqShift() {
   for (int j = 0; j < kNumberOfSamples; ++j) {
     signal_freq_first[j].realPart = cos(2.0 * M_PI * freq_first * j);
     signal_freq_first[j].imagPart = sin(2.0 * M_PI * freq_first * j);
-    //signal_freq_first_real[j] = std::real(signal_freq_first[j]);
-    //signal_freq_first_imag[j] = std::imag(signal_freq_first[j]);
     signal_freq_second[j].realPart = cos(2.0 * M_PI * freq_second * j);
     signal_freq_second[j].imagPart = sin(2.0 * M_PI * freq_second * j);
   }
@@ -45,16 +40,12 @@ bool TestMakeFreqShift() {
   }
 
   // Difference between signal with f2 frequency and signal after shift
-  //std::vector<float> signal_after_shift_real(kNumberOfSamples);
-  //std::vector<float> signal_after_shift_imag(kNumberOfSamples);
   std::vector<float> error_signal_abs(kNumberOfSamples);
   for (int j = 0; j < kNumberOfSamples; ++j) {
     error_signal_abs[j] = std::sqrt(std::pow(signal_freq_second[j].realPart -
                                                  signal_after_shift[j].realPart, 2) +
                                     std::pow(signal_freq_second[j].imagPart -
                                                  signal_after_shift[j].imagPart, 2));
-    // signal_after_shift_real[j] = std::real(signal_after_shift[j]);
-    // signal_after_shift_imag[j] = std::imag(signal_after_shift[j]);
   }
 
   float execute_time = (end_time - start_time) / 1000.0f;
