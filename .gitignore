@@ -365,3 +365,6 @@ FodyWeavers.xsd
 /Library/DataOut.txt
 /Library/DataIn.txt
 /Library/ForTesting.txt
+/Library/Exampe TestFreqShifter.cpp
+/Library/Example_GenerateSin.cpp
+/Library/Example_TestConv.cpp
